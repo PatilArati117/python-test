@@ -1,23 +1,22 @@
 #Author: OMKAR PATHAK
-#This program checks whether the entered number is prime or not
+#This program calculates the factorial of a given number
 
-def checkPrime(number):
-    '''This function checks for prime number'''
-    isPrime = False
-    if number == 2:
-        print(number, 'is a Prime Number')
-    if number > 1:
-        for i in range(2, number):
-            if number % i == 0:
-                print(number, 'is not a Prime Number')
-                isPrime = False
-                break
-            else:
-                isPrime = True
+def factorial(number):
+    '''This function calculates the factorial of a number'''
+    if number == 1 or number == 0:
+        return 1
+    else:
+        return number * factorial(number - 1)
 
-        if isPrime:
-            print(number, 'is a Prime Number')
+def factorial_without_recursion(number):
+    fact = 1
+    while(number > 0):
+        fact = fact * number
+        number = number - 1
+    print('Factorial of', number,'is: ')
+    print(fact)
 
 if __name__ == '__main__':
-    userInput = int(input('Enter a number to check: '))
-    checkPrime(userInput)
+    userInput = int(input('Enter the number to find its factorial: '))
+    print('Factorial of', userInput, 'is:', factorial(userInput))
+    factorial_without_recursion(userInput)
