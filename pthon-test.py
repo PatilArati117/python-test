@@ -2,7 +2,6 @@
 #This program calculates the factorial of a given number
 
 def factorial(number):
-    '''This function calculates the factorial of a number'''
     if number == 1 or number == 0:
         return 1
     else:
