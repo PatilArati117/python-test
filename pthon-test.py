@@ -33,7 +33,6 @@
 # result = list(str(int(A) - int(B)))
 # result[random.randint(0, 3)] = str(random.randint(0, 9))
 # print(int(''.join(result)))
-
 A, B = map(int, input().split())
 C = A - B
 if C % 10 == 9:
