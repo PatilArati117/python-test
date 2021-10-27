@@ -19,5 +19,4 @@ def checkPrime(number):
             print(number, 'is a Prime Number')
 
 if __name__ == '__main__':
-    userInput = int(input('Enter a number to check: '))
-    checkPrime(userInput)
+    checkPrime(2)
